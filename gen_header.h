@@ -7,9 +7,6 @@
 
 //experiment
 
-int experiment (double *radioactivity, double *time, double start_time,
-                double end_time, double step);
-
 /**
 * функция имитации эксперимента (снятия экспериментальных точек)
  * @param radioactivity - массив экспериментальных данных
@@ -18,13 +15,18 @@ int experiment (double *radioactivity, double *time, double start_time,
  * @param end_time - конечный момент времени
  * @param step - разность между двумя соседними моментами времени
  */
-void add_noise (double *radioactivity, int N);
+
+int experiment (double *radioactivity, double *time, double start_time,
+                double end_time, double step);
 
 /**
  * имитирует неточные значения экспериментальных
  * @param radioactivity - массив экспериментальных данных
  * @param N - число экспериментальных точек
  */
+
+void add_noise (double *radioactivity, int N);
+
 
 //nonlinear and linear equation
 
