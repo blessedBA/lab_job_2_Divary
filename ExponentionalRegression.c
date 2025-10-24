@@ -3,12 +3,6 @@
 #include <assert.h>
 #include <math.h>
 
-/*
-передаем указатель на массив экспериментальных данных и массив аргу-
-ментов, количество элементов массива, значение, в котором необходимо
-найти значение функции, возвращает значение функции в данной точке.
-*/
-
 static double model(double *radioactivity, double *time, const int N, double point)
 {
     assert(radioactivity);
@@ -25,17 +19,6 @@ static double model(double *radioactivity, double *time, const int N, double poi
     return model_val;
 }
 
-/*
-передаем указатель на массив экспериментальных дан-
-ных и массив аргументов, количество элементов массива и точность ре-
-шения нелинейного уравнения Ɛ (precision). Функция возвращает значе-
-ние decay_time, который является корнем нелинейного уравнения, решен-
-ного методом деления отрезка пополам. Эта функция, в свою очередь,
-обращается к функции, в которой вычисляется значение функции, ноль
-которой мы ищем в текущей точке интервала
-*/
-
-//returns decay time
 double nonlinear_equation (double *radioactivity, double *time, const int N, const double precision)
 {
     assert(radioactivity);
