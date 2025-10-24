@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Building..."
-g++ main.cpp punkt1.cpp \
+g++ main.c punkt1.c \
  -o punkt1.out -D _DEBUG -g -ggdb3 -std=c++17 -O0 -Wall -Wextra -Weffc++ -Wc++14-compat -Wmissing-declarations -Wcast-align -Wcast-qual \
 -Wchar-subscripts -Wconversion -Wctor-dtor-privacy -Wempty-body -Wfloat-equal -Wformat-nonliteral -Wformat-security \
 -Wformat-signedness -Wformat=2 -Winline -Wnon-virtual-dtor -Woverloaded-virtual -Wpacked -Wpointer-arith -Winit-self \
