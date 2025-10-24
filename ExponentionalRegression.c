@@ -9,7 +9,7 @@
 найти значение функции, возвращает значение функции в данной точке.
 */
 
-double model(double *radioactivity, double *time, const int N, double point)
+static double model(double *radioactivity, double *time, const int N, double point)
 {
     assert(radioactivity);
     assert(time);
