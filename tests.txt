@@ -1,0 +1,59 @@
+вариант 1
+Исходные данные     Результат решения
+start_time 0.0
+end time 9.9        decay time 3.0 ± 0.05
+step 0.1
+precision 0.001
+const betta 3.0     decay rate 7.751 ± 0.05
+interval1 0.2
+Interval2 8.2       time_differences 3.3 : 4.3
+
+вариант 2
+Исходные данные     Результат решения
+start_time 0.0
+end time 9.9        decay time 4.0 ±0.05
+step 0.1
+prcision 0.001
+const betta 4.0     decay rate 8.546±0.05
+interval1 0.2
+interval2 8.2       time_differences 4.5 : 5.9
+
+вариант 3
+Исходные данные     Результат решения
+start_time 0.0
+end_time 9.9        decay_time 4.5±0.05
+step 0.1
+precision 0.001
+const betta 4.5     decay_rate 8.921±0.05
+interval1 0.2
+interval2 8.2       time_differences 5.5 : 6.4
+
+вариант 4
+Исходные данные     Результат решения
+start_time 0.0
+end_time 9.9        decay_time 3.7±0.05
+step 0.1
+precision 0.001
+const betta 3.7     decay_rate 8.317±0.05
+interval1 0.2
+interval2 8.2       time_differences 4.3 : 5.4
+
+вариант 5
+Исходные данные     Результат решения
+start_time 0.0
+end_time 9.9        decay_time 5.0±0.05
+step 0.1
+precision 0.01
+const betta 5.0     decay_rate 9.319±0.05
+interval1 0.2
+interval2 8.2       time_differences 5.7 : 7.1
+
+вариант 6
+Исходные данные       Результат решения
+start_time 0.0
+decay_time 5.3±0.05   end_time 9.9
+step 0.1
+precision 0.001
+decay_rate 9.625±0.05 const betta 5.3
+interval1 0.2
+interval2 8.2         time_differences 5.8 : 7.7
