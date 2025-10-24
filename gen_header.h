@@ -1,9 +1,9 @@
 #ifndef GEN_HEADER_H
 #define GEN_HEADER_H
 
-#include "math.h"
-#include "assert.h"
-#include "stdio.h"
+#include <math.h>
+#include <assert.h>
+#include <stdio.h>
 
 //experiment
 
@@ -23,8 +23,8 @@ void add_noise (double *radioactivity, int N);
  * @param N - количество элементов массива
  * @return decay_rate
  */
-double linear_equation(double * radioactivity, double * time, int N)
-
+double linear_equation(double * radioactivity, double * time, int N);
+double nonlinear_equation (double *radioactivity, double *time, const int N, const double precision);
 
 //precision_analysis:
 
