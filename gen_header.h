@@ -25,7 +25,7 @@ void add_noise (double *radioactivity, int N);
  */
 double linear_equation(double * radioactivity, double * time, int N);
 
-//decay_rate
+//decay_time
 double nonlinear_equation (double *radioactivity, double *time, const int N, const double precision);
 
 //precision_analysis:

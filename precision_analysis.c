@@ -1,6 +1,14 @@
 #include "gen_header.h"
 
-double dev_exp(double *radioactivity, double *time, int M, double decay_time) {
+double precision_analysis (double *radioactivity, double *time, int N, double decay_time, ) {
+    assert(radioactivity != NULL);
+    assert(time != NULL);
+    assert(N != NULL);
+
+
+}
+
+double dev_exp(double *radioactivity, double *time, int M) {
     assert(radioactivity != NULL);
     assert(time != NULL);
     assert(M != NULL);
