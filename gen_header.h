@@ -17,6 +17,7 @@ int experiment (double *radioactivity, double *time, double start_time,
 
 //precision_analysis:
 
+double dev_linear(double *radioactivity, double *time, int M, double decay_rate);
 
 /**
  * Функция вычисления среднеквадратичного отклонения для экспоненциальной модели
