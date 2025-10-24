@@ -1,3 +1,5 @@
+#include "gen_header.h"
+
 #include <assert.h>
 #include <math.h>
 
