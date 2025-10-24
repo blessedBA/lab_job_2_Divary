@@ -37,7 +37,15 @@ void add_noise (double *radioactivity, int N);
  * @return decay_rate
  */
 double linear_equation(double * radioactivity, double * time, int N);
-
+/**
+ * Функция вычисления decay_time
+ *
+ * @param radioactivity - массив экспериментальных данных
+ * @param time - массив временных точек
+ * @param N - количество элементов массива
+ * @param precision - погрешность вычисления decay_time
+ * @return decay_time
+ */
 double nonlinear_equation (double *radioactivity, double *time, const int N, const double precision);
 
 //precision_analysis:
