@@ -72,5 +72,15 @@ double dev_linear(double *radioactivity, double *time, int M, double decay_rate)
  */
 double dev_exp(double *radioactivity, double *time, int M, double decay_time);
 
+/**
+ * Функция вычисления среднеквадратичного отклонения для экспоненциальной модели
+ *
+ * @param radioactivity - массив экспериментальных данных
+ * @param time - массив временных точек
+ * @param N - количество точек на интервале
+ * @param precision - погрешность вычисления decay_time
+ * @return значение времени, начиная с которого линейная модель не адекватно описывает процесс распада
+ */
+double precision_analysis(double *radioactivity, double *time, int N, double precision);
 
 #endif // GEN_HEADER_H
