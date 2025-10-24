@@ -1,14 +1,23 @@
 #include "gen_header.h"
 
-double precision_analysis (double *radioactivity, double *time, int N, double decay_time, ) {
+double precision_analysis(double *radioactivity, double *time, int N, double precision) {
     assert(radioactivity != NULL);
     assert(time != NULL);
     assert(N != NULL);
 
+    double decay_rate, decay_time, i;
 
+    for(i = 10; i < (N + 1); i ++) {
+        decay_rate = linear_equation(radioactivity, time, i);
+        decay_time = nonlinear_equation(radioactivity, time, i, precision);
+
+        if ((dev_linear(radioactivity, time, i, decay_rate) * 2) < dev_exp(radioactivity, time, i)) break;
+    }
+
+    return time[i - 1];
 }
 
-double dev_exp(double *radioactivity, double *time, int M) {
+double dev_exp(double *radioactivity, double *time, int M, double decay_time) {
     assert(radioactivity != NULL);
     assert(time != NULL);
     assert(M != NULL);
