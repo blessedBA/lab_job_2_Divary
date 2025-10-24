@@ -53,12 +53,13 @@ dev_linear() - СКО для линейной модели
 ## Распределение заданий
 
 Студент - Функции
-- kalmak07    README.md
+- kalmak07  README.md
 - 	        experiment(), add_noise()
 - 	        nonlinear_equation(), model()
 - 	        linear_equation()
 - 	        precision_analysis()
-- 	        dev_exp(), dev_linear()
+- kalmak07  dev_exp()
+- OlgaE17   dev_linear()
 - 	        Дублирование ключевых функций + main()
 
 ## Входные параметры
