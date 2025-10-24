@@ -24,10 +24,21 @@ void add_noise (double *radioactivity, int N);
  * @return decay_rate
  */
 double linear_equation(double * radioactivity, double * time, int N);
+
+//decay_rate
 double nonlinear_equation (double *radioactivity, double *time, const int N, const double precision);
 
 //precision_analysis:
 
+/**
+ * Функция вычисления среднеквадратичного отклонения для экспоненциальной модели
+ *
+ * @param radioactivity - массив экспериментальных данных
+ * @param time - массив временных точек
+ * @param M - количество точек на интервале
+ * @param decay_rate - характерное время распада
+ * @return линейное отклонение
+ */
 double dev_linear(double *radioactivity, double *time, int M, double decay_rate);
 
 /**
