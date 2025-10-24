@@ -23,6 +23,7 @@ double nonlinear_equation (double *radioactivity, double *time, const int N, con
 {
     assert(radioactivity);
     assert(time);
+    assert(precision > 0);
 
     const double interval1 = 0.2, interval2 = 8.2;
 
