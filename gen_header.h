@@ -17,7 +17,7 @@
  */
 
 int experiment (double *radioactivity, double *time, double start_time,
-                double end_time, double step);
+                double end_time, double step, double betta);
 
 /**
  * имитирует неточные значения экспериментальных
