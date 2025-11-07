@@ -11,7 +11,7 @@ double precision_analysis(double *radioactivity, double *time, int N, double pre
         decay_rate = linear_equation(radioactivity, time, i);
         decay_time = nonlinear_equation(radioactivity, time, i, precision);
 
-        if ((dev_linear(radioactivity, time, i, decay_rate) * 2) < dev_exp(radioactivity, time, i)) break;
+        if ((dev_linear(radioactivity, time, i, decay_rate) * 2) < dev_exp(radioactivity, time, i, decay_time)) break;
     }
 
     return time[i - 1];
