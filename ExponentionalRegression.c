@@ -30,7 +30,8 @@ double nonlinear_equation (double *radioactivity, double *time, const int N, con
     double left_decay_time = interval1, right_decay_time = interval2;
     while (right_decay_time - left_decay_time > precision)
     {
-        if(model(radioactivity, time, N, (right_decay_time + left_decay_time) / 2) > 0)
+        //printf("l=%lg, r=%lg, model=%lg\n", left_decay_time, right_decay_time, model(radioactivity, time, N, (right_decay_time + left_decay_time) / 2));
+        if (model(radioactivity, time, N, (right_decay_time + left_decay_time) / 2) < 0)
             right_decay_time = (left_decay_time + right_decay_time) / 2;
         
         else

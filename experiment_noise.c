@@ -9,13 +9,13 @@
 #define R_0 1
 #define AMPLITUDE 0.05
 int experiment (double* radioactivity, double* time, double start_time,
-                double end_time, double step)
+                double end_time, double step, double betta)
 {
     #ifndef NDEBUG
     assert(radioactivity && time);
     #endif
 
-    double const betta = 3.5;
+    //double const betta = 3.5;
     int N = 100;
     for (int index = 0; index < N; index++)
     {

@@ -3,10 +3,11 @@
 double precision_analysis(double *radioactivity, double *time, int N, double precision) {
     assert(radioactivity != NULL);
     assert(time != NULL);
-    assert(N != NULL);
+    //assert(N != NULL);
 
-    double decay_rate, decay_time, i;
+    double decay_rate = 0, decay_time = 0;
 
+    int i = 10;
     for(i = 10; i < (N + 1); i ++) {
         decay_rate = linear_equation(radioactivity, time, i);
         decay_time = nonlinear_equation(radioactivity, time, i, precision);
@@ -20,8 +21,8 @@ double precision_analysis(double *radioactivity, double *time, int N, double pre
 double dev_exp(double *radioactivity, double *time, int M, double decay_time) {
     assert(radioactivity != NULL);
     assert(time != NULL);
-    assert(M != NULL);
-    assert(decay_time != NULL);
+    //assert(M != NULL);
+    //assert(decay_time != NULL);
 
     double sum_residuals = 0.0;
 

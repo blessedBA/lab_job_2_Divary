@@ -15,21 +15,22 @@ int main(void)
     double precision = 0, betta = 0;
     while(scanf("%lf%lf", &precision, &betta) == 2)
     {
+        //printf("p=%lg, b=%lg\n", precision, betta);
         static int count = 1;
 
-        experiment(radioactivity, time, start_time, end_time, step);
+        experiment(radioactivity, time, start_time, end_time, step, betta);
         add_noise(radioactivity, NUM_OF_POINTS);
 
         double decay_rate = linear_equation(radioactivity, time, NUM_OF_POINTS);
         double decay_time = nonlinear_equation(radioactivity, time, NUM_OF_POINTS, precision);
 
-        double decay_time_err = dev_exp(radioactivity, time, NUM_OF_POINTS, decay_time);
-        double decay_rate_err = dev_linear(radioactivity, time, NUM_OF_POINTS, decay_rate);
+        //double decay_time_err = dev_exp(radioactivity, time, NUM_OF_POINTS, decay_time);
+        //double decay_rate_err = dev_linear(radioactivity, time, NUM_OF_POINTS, decay_rate);
 
         printf("test data[%d]:\n", count++);
         printf("decay rate = %lg\n", decay_rate);
         printf("decay time = %lg\n", decay_time);
-        printf("time_difference = %lg\n", precision_analysis(radioactivity, time, NUM_OF_POINTS));
+        printf("time_difference = %lg\n", precision_analysis(radioactivity, time, NUM_OF_POINTS, precision));
 
         putchar('\n');
 
