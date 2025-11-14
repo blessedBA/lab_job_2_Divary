@@ -8,11 +8,11 @@ double precision_analysis(double *radioactivity, double *time, int N, double pre
     double decay_rate = 0, decay_time = 0;
 
     int i = 10;
-    for(i = 10; i < (N + 1); i ++) {
+    for(i = 10; i < (N); i ++) {
         decay_rate = linear_equation(radioactivity, time, i);
         decay_time = nonlinear_equation(radioactivity, time, i, precision);
 
-        if ((dev_linear(radioactivity, time, i, decay_rate) * 2) < dev_exp(radioactivity, time, i, decay_time)) break;
+        if ((dev_linear(radioactivity, time, i, decay_rate)) > 2 * dev_exp(radioactivity, time, i, decay_time)) break;
     }
 
     return time[i - 1];
@@ -32,7 +32,7 @@ double dev_exp(double *radioactivity, double *time, int M, double decay_time) {
         sum_residuals += residual * residual;
     }
 
-    double deviation = sqrt(sum_residuals / M);
+    double deviation = sqrt(sum_residuals) / M;
 
     return deviation;
 }
