@@ -48,8 +48,8 @@ void add_noise (double *radioactivity, int N)
 
     srand((unsigned int)time(NULL));
 
-    double min = -1;
-    double max =  1;
+    //double min = -1;
+    //double max =  1;
     double randomNumber = 0.0;
     for (int index = 0; index < N; index++)
     {
